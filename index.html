@@ -65,12 +65,15 @@ window.addEventListener('beforeinstallprompt', (e) => {
   <div class="top-bar-right">
   </div>
 </div>
-  <main>
-    <div class="container large-6 columns large-offset-3">
+   <form>
+       <div class="container large-6 columns large-offset-3">
       <div class="row"><h3 class="text-error" id="error-message"></h3></div>
-      <div class="row"><h3 class="text-info" id="message"></h3></div>
-    
-      <div  data-alert class="alert-box info radius"><h3 class="text-success" id="success-message"></h3></div>
+      <div class=" large-12 columns callout success" data-closable="slide-out-right" style="font-weight:bold;text-align:center;">
+        <h3 class="text-info" id="message"></h3></div>
+    <div  data-alert class="large-12 columns callout success" data-closable="slide-out-right" style="font-weight:bold;text-align:center;">
+      <h3 class="text-success" id="success-message"></h3></div><div class="large-2 large-offset-10 columns">
+      <button id="reset" name="reset" type="button" aria-label="Reset" class="button tiny radius" style="font-size:16px;font-weight:bold;margin-left:0px;">
+        Reset</button></div>
       <div class="row justify-content-center align-items-center main">
         <div class="col border border-secondary p-5 justify-content-center bg-secondary">
           <div>
@@ -110,14 +113,14 @@ window.addEventListener('beforeinstallprompt', (e) => {
         </div>
       </div>
 
-      <div class="row justify-content-center align-items-center m-3" id='alert' style="display: none;">
+     <div class="row justify-content-center align-items-center m-3" id='alert' style="display: none;position: absolute;;bottom: 0px;left:0px;">
         <div class="alert alert-primary" role="alert">
           <strong id='alert-message'></strong>
           <div>
-            <button id='refresh' name="refresh" type="button" aria-label="Refresh" class="prompt">
+            <button id='refresh' name="refresh" type="button" aria-label="Refresh" class="button">
               Refresh
             </button>
-            <button id='dismiss' name="dismiss" type="button" aria-label="Dismiss" class="prompt">
+            <button id='dismiss' name="dismiss" type="button" aria-label="Dismiss" class="button">
               Dismiss
             </button>
           </div>
@@ -125,8 +128,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
       </div>
 
     </div>
-  </main>
-
   <form>
   
    
@@ -167,16 +168,14 @@ window.addEventListener('beforeinstallprompt', (e) => {
    <input min="" value="0" name="inputToAmount" type="number" class="form-control" id="inputToAmount" 
      placeholder="Amount in number">
         </div>
-        <button id="reset" name="reset" type="button" aria-label="Reset" class="button tiny radius">
-                Reset
-              </button>
+   
       </div>
     </div>
   
 </form>
   <footer class="footer" style="position:absolute;bottom:0px;">
     <div class="container">
-      <span class="text-muted">Powered by ALC Mobile Web Specialist community - 2018 &<a href="https://free.currencyconverterapi.com/">Freecurrencyconverterapi</a></span>
+      <span class="text-muted">Powered by ALC mobile-web-specialist community 2018 & <a href="https://www.currencyconverterapi.com">Freecurrencyconverterapi</a></span>
     </div>
   </footer>
  <script src="js/db.js" async></script>
