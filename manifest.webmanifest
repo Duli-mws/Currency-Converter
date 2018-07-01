@@ -1,6 +1,6 @@
 { 
-  "short_name": "Converter",
-  "name": "Currency Converter",
+  "short_name": "Convert",
+  "name": "Converter",
    "icons": [
     {
       "src": "/images/icons-192.png",
