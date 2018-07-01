@@ -323,7 +323,7 @@ function openDatabase() {
 class MainController {
   static registerServiceWorker() {
     if (!navigator.serviceWorker) return;
-    navigator.serviceWorker.register('sw.js',{scope: '/Currency-Converter/'})
+    navigator.serviceWorker.register('sw.js')
     .then((registration) => {
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
       if (!navigator.serviceWorker.controller) {
