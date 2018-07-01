@@ -2,7 +2,6 @@ const staticCacheName = 'currency-converter-static-v9999';
 const urlsToCache = [
   '/Currency-Converter/',
   'index.html',
-  'manifest.webmanifest',
   'js/main.js',
   'js/db.js',
   'js/foundation.min.js',
