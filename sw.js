@@ -1,4 +1,4 @@
-const staticCacheName = 'currency-converter-static-v999999';
+const staticCacheName = 'currency-converter-static-v9999999';
 const urlsToCache = [
   '/Currency-Converter/',
   'index.html',
