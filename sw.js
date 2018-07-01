@@ -4,6 +4,8 @@ const urlsToCache = [
   'index.html',
   'js/main.js',
   'js/db.js',
+  'js/foundation.min.js',
+  'js/vendor/jquery.js',
   'css/foundation.min.css',
   'https://free.currencyconverterapi.com/api/v5/countries',
   'https://free.currencyconverterapi.com/api/v5/currencies' 
