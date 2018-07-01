@@ -291,7 +291,7 @@ const calculate = (val, amount, query, cb) => {
   if (val) {
     const total = val * amount;
     cb(Math.round(total * 100) / 100);
-    const message = `At ${val} ${to} per ${from}`;
+    const message = `@ ${val} ${to} per ${from}`;
     logSuccess(message);
   }
 }
