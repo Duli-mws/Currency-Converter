@@ -3,57 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="author" content="Abdallah Bawazir">
+  <meta name="author" content="Usman Suleiman Babakolo">
   <meta name="description" content="Currency Converter">
   <meta name="theme-color" content="#317EFB"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://duli-mws.github.io/Currency-Converter/" />
-  <link rel="stylesheet" href="css/foundation.min.css" media="none" onload="if(media!='all')media='all'">
-  <noscript><link rel="stylesheet" href="css/foundation.min.css"></noscript>
-   <script src="js/vendor/jquery.js"></script>
-   <script src="js/main.js" async></script>
-  <style>
-    body{font-size:16px;} .prompt { color: #fff;background: #323216; padding: 14px 24px; padding-right: 0;opacity: 0;
-    display: -webkit-flex;display: flex;} 
-  </style>
-  <script>
-    let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-});
-    
-    window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  // Show the prompt
-  deferredPrompt.prompt();
-  // Wait for the user to respond to the prompt
-  deferredPrompt.userChoice
-    .then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the A2HS prompt');
-      } else {
-        console.log('User dismissed the A2HS prompt');
-      }
-      deferredPrompt = null;
-    });
-});
-    window.addEventListener('appinstalled', (evt) => {
-  app.logEvent('a2hs', 'installed');
-});
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-  console.log('display-mode is standalone');
-}
-    
-    if (window.navigator.standalone === true) {
-  console.log('display-mode is standalone');
-}
-  </script>
+  <link rel="canonical" href="https://localhost:9000" />
+  <link rel="stylesheet" href="css/foundation.min.css" >
   <title>Currency Converter</title>
+  <style>
+    body{font-size:16px;} .prompt { `} 
+  </style>
+
 </head>
 <body>
   <div class="top-bar" style="background:#333;">
@@ -66,16 +26,14 @@ window.addEventListener('beforeinstallprompt', (e) => {
   </div>
 </div>
   <main>
-  <form>
+    <form>
       
     <div class="container large-6 columns large-offset-3">
       <div class="row"><h3 class="text-error" id="error-message"></h3></div>
-      <div class=" large-12 columns callout success" data-closable="slide-out-right" style="font-weight:bold;text-align:center;">
-        <h3 class="text-info" id="message"></h3></div>
-    <div  data-alert class="large-12 columns callout success" data-closable="slide-out-right" style="font-weight:bold;text-align:center;">
-      <h3 class="text-success" id="success-message"></h3></div>
-      <div class="large-2 large-offset-10 columns"> <button id="reset" name="reset" type="button" aria-label="Reset" class="button tiny radius" style="font-size:16px;font-weight:bold;margin-left:0px;">
-      Reset</button></div>
+      <div class=" large-12 columns callout success" data-closable="slide-out-right" style="font-weight:bold;text-align:center;"><h3 class="text-info" id="message"></h3></div>
+    
+      <div  data-alert class="large-12 columns callout success" data-closable="slide-out-right" style="font-weight:bold;text-align:center;"><h3 class="text-success" id="success-message"></h3></div><div class="large-2 large-offset-10 columns"><button id="reset" name="reset" type="button" aria-label="Reset" class="button tiny radius" style="font-size:16px;font-weight:bold;margin-left:0px;">
+        Reset</button></div>
       <div class="row justify-content-center align-items-center main">
         <div class="col border border-secondary p-5 justify-content-center bg-secondary">
           <div>
@@ -94,6 +52,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
                     </div>
                    
                   </div>
+
               </div>
             </div>
           </div>
@@ -115,7 +74,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
         </div>
       </div>
 
-     <div class="row justify-content-center align-items-center m-3" id='alert' style="display: none;position: absolute;bottom: 0px;left:0px;">
+      <div class="row justify-content-center align-items-center m-3" id='alert' style="display: none;position: absolute;bottom: 0px;left:0px;">
         <div class="alert alert-primary" role="alert">
           <strong id='alert-message'></strong>
           <div>
@@ -130,7 +89,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
       </div>
 
     </div>
-  <form>
+  </main>
+
   
    
   <div class="large-6 columns large-offset-3">
@@ -144,12 +104,18 @@ window.addEventListener('beforeinstallprompt', (e) => {
     <div class="row">
     <div class="large-6 columns">
       <div class="row collapse prefix-radius">
-        <div class="small-2 columns">
+        <div class="small-1 columns">
           <span class="prefix" id="fromCurrencySymbol"">Label</span>
         </div>
-        <div class="small-10 columns">
-          <input min="" value="0" name="inputFromAmount" type="number" class="form-control" id="inputFromAmount" 
-           placeholder="Amount in number">
+        <div class="small-11 columns">
+          <input
+                      min="0"
+                      value="0"
+                      name="inputFromAmount"
+                      type="number"
+                      class="form-control"
+                      id="inputFromAmount"
+                      placeholder="Amount in number">
         </div>
       </div>
     </div>
@@ -159,33 +125,42 @@ window.addEventListener('beforeinstallprompt', (e) => {
        <select name="inputToCountry" class="form-control" id="inputToCountry">
                   <option value=''>Select country</option>
                 </select>
+    
     </div>
-      <div class="row">
+
+    <div class="row">
     <div class="large-6 columns">
       <div class="row collapse prefix-radius">
-        <div class="small-2 columns">
+        <div class="small-1 columns">
           <span class="prefix" id="toCurrencySymbol">Label</span>
         </div>
-        <div class="small-10 columns">
-   <input min="" value="0" name="inputToAmount" type="number" class="form-control" id="inputToAmount" 
-     placeholder="Amount in number">
+        <div class="small-11 columns">
+          <input
+                    min="0"
+                    value="0"
+                    name="inputToAmount"
+                    type="number"
+                    class="form-control"
+                    id="inputToAmount"
+                    placeholder="Amount in number">
         </div>
-   
+        
       </div>
     </div>
   
 </form>
- </main>
   <footer class="footer" style="position:absolute;bottom:0px;">
     <div class="container">
       <span class="text-muted">Powered by ALC mobile-web-specialist community 2018 & <a href="https://www.currencyconverterapi.com">Freecurrencyconverterapi</a></span>
     </div>
   </footer>
- <script src="js/db.js" async></script>
-   <script src="js/foundation.min.js"></script>
+  <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>
- 
+
+  <script src="js/db.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
