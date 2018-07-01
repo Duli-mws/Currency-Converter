@@ -1,5 +1,5 @@
-const BASE_URL ='https://free.currencyconverterapi.com';
-const LIST_OF_COUNTRIES ='/api/v5/countries';
+const BASE_URL = 'https://free.currencyconverterapi.com';
+const LIST_OF_COUNTRIES = '/api/v5/countries';
 const CONVERT = `/api/v5/convert?q=`;
 
 const defaultCountry = '';
@@ -140,7 +140,7 @@ const resetSession = () => {
   toAmountInput.value =  defaultAmount;
   toCurrencySymbol.innerText = '#';
   logSuccess('');
-  logInfo('Select countries');
+  logInfo('Convert all currencies');
   saveSession();
 }
 
@@ -216,7 +216,7 @@ const getCountries = (results) => {
      console.log(countries);
     // make countries avalable to view handlers
     countriesWithCurrencies = countries.sort((a, b) => a.countryName.localeCompare(b.countryName));  
-    logInfo('Select countries');
+    logInfo('Convert all currencies');
     return resolve(countries);
   });
 }
@@ -323,7 +323,7 @@ function openDatabase() {
 class MainController {
   static registerServiceWorker() {
     if (!navigator.serviceWorker) return;
-    navigator.serviceWorker.register('sw.js')
+    navigator.serviceWorker.register('/sw.js',{scope: '/'})
     .then((registration) => {
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
       if (!navigator.serviceWorker.controller) {
