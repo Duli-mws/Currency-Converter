@@ -1,6 +1,6 @@
 const staticCacheName = 'currency-converter-static-v3999';
 const urlsToCache = [
-  '/',
+  '/Currency-Converter/',
   'index.html',
   'js/main.js',
   'js/db.js',
