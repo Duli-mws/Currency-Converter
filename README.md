@@ -1,3 +1,5 @@
 # Mobile-First-Currency-Convertor
-Mobile first currency converter that uses the free currency converter api
+Progressive Mobile App Currency Converter that uses the free currency converter api
 and IndexedDB library by Jake Archibald
+
+Link to app https://duli-mws.github.io/Currency-Converter/
