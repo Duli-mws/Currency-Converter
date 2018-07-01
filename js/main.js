@@ -1,4 +1,4 @@
-
+const BASE_URL = 'https://free.currencyconverterapi.com';
 const LIST_OF_COUNTRIES = '/api/v5/countries';
 const CONVERT = `/api/v5/convert?q=`;
 
