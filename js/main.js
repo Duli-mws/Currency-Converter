@@ -138,7 +138,7 @@ const resetSession = () => {
   fromCurrencySymbol.innerText = '';
   toCountryInput.value = defaultCountry;
   toAmountInput.value =  defaultAmount;
-  toCurrencySymbol.innerText = '#';
+  toCurrencySymbol.innerText = '';
   logSuccess('');
   logInfo('Convert all currencies');
   saveSession();
