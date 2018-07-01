@@ -1,11 +1,5 @@
 const staticCacheName = 'currency-converter-static-v1999';
-const urlsToCache = [
-  '/',
-  '/js/main.js',
-  '/css/foundation.min.css',
-  'https://free.currencyconverterapi.com/api/v5/countries',
-  'https://free.currencyconverterapi.com/api/v5/currencies'
-  ]
+const urlsToCache = []
 
   //Install service 
 
