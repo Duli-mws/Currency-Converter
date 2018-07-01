@@ -5,7 +5,8 @@ const urlsToCache = [
   'js/main.js',
   'js/db.js',
   'css/foundation.min.css',
-  
+  'https://free.currencyconverterapi.com/api/v5/countries',
+  'https://free.currencyconverterapi.com/api/v5/currencies' 
 ]
 
   //Install service 
