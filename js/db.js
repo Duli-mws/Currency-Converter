@@ -1,13 +1,3 @@
-/*
- * @author Babakolo Usman Suleiman
- * @date 26-06-2018T02:42am
- * Simplification of indexedDB api
- * to work with my implementation of persistent query
- * which at the time of development used localStorage.
- * This class only implements 3 localStorage interface methods (getItem, setItem and removeItem)
- * used during development
- */
-
 const storeName = 'currency-converter-store';
 class LocalIndexedStorage {
 
