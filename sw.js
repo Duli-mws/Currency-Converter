@@ -1,7 +1,8 @@
 const staticCacheName = 'currency-converter-static-v3999';
 const urlsToCache = [
-'index.html',
+  'index.html',
   'js/main.js',
+  'js/db.js',
   'css/foundation.min.css',
   'https://free.currencyconverterapi.com/api/v5/countries',
   'https://free.currencyconverterapi.com/api/v5/currencies'
