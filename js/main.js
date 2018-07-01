@@ -213,7 +213,6 @@ const getCountries = (results) => {
       countryName: value.name,
       symbol: value.currencySymbol,
     }));
-     console.log(countries);
     // make countries avalable to view handlers
     countriesWithCurrencies = countries.sort((a, b) => a.countryName.localeCompare(b.countryName));  
     logInfo('Convert all currencies');
