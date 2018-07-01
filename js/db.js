@@ -1,7 +1,7 @@
 const storeName = 'currency-converter-store';
 class LocalIndexedStorage {
 
-  static open(dbName='Currency-Converter-Code-Challenge', version=1) {
+  static open(dbName='Currency-Converter', version=1) {
     return new Promise((resolve, reject) => {
       if (!window.indexedDB) {
         const message = "Your browser doesn't support a stable version of IndexedDB. Your app wont work completely offline";
